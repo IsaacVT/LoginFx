@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0" stylesheets="@TiendaFloresStyle.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uia.dapp.login.controller.ShoppingCartController">
+   <children>
+      <AnchorPane id="storeView" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <SplitPane dividerPositions="0.6265664160401002" prefHeight="300.0" prefWidth="600.0" style="-fx-background-color: none;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <items>
+                <AnchorPane id="productos" minHeight="0.0" minWidth="0.0" prefHeight="498.0" prefWidth="535.0">
+                     <children>
+                        <TableView id="listado" fx:id="tablaCarrito" layoutY="24.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columns>
+                              <TableColumn id="listadoFlores" fx:id="productosPedidos" prefWidth="235.0" resizable="false" text="Producto" />
+                              <TableColumn id="listadoFlores" fx:id="cantidadPedidos" prefWidth="85.0" resizable="false" text="Cantidad" />
+                              <TableColumn id="listadoFlores" fx:id="costoPedidos" prefWidth="85.0" resizable="false" text="Costo" />
+                              <TableColumn id="listadoFlores" fx:id="envioPedidos" minWidth="0.0" prefWidth="85.0" resizable="false" text="Envio" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane id="infoProducto" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="27.0" prefWidth="230.0" styleClass="label-header" text="DETALLES DE LA COMPRA" />
+                              <Label fx:id="cantidadCarritoLabel" layoutX="166.0" layoutY="77.0" text="Cantidad de productos : 99" />
+                              <Label fx:id="costoProductosLabel" text="Costo Productos : $ 12435.12" />
+                              <Label fx:id="costoEnviosLabel" layoutX="154.0" layoutY="77.0" text="Envio : $ 12435.12" />
+                              <Label fx:id="pagoTotalLabel" layoutX="154.0" layoutY="164.0" text="Total a pagar : $ 12435.12" />
+                              <Button mnemonicParsing="false" prefWidth="110.0" text="Pedir y pagar" />
+                              <HBox alignment="CENTER" prefHeight="50.0" prefWidth="210.0" spacing="16.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#handleEliminar" prefWidth="110.0" text="Borrar articulo" />
+                                    <Button mnemonicParsing="false" onAction="#handleRegresar" prefWidth="110.0" text="Regresar" />
+                                 </children>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

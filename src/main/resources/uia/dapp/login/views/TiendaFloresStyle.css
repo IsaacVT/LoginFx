@@ -1,0 +1,89 @@
+.button {
+   -fx-background-color:  rgb(90, 168, 70);
+   -fx-text-fill: white;
+   -fx-font-size: 14px;
+}
+
+.button:hover {
+   -fx-background-color:  rgb(90, 168, 70, 0.5);
+   -fx-text-fill: black;
+ }
+
+
+.button:pressed {
+   -fx-background-color: rgb(255,255,255,0.7);
+   -fx-text-fill:  rgb(60, 110, 48);
+ }
+
+.password-field, .text-field {
+   -fx-background-color:  rgb(90, 168, 70, 0.4);
+   -fx-text-fill: white;
+   -fx-font-size: 14px;
+}
+
+.label {
+   -fx-text-fill: white;
+}
+
+.table-view {
+   -fx-background-color: rgb(255,255,255,0.5);
+   -fx-text-fill: black;
+   -fx-font-size: 16px;
+}
+
+#portadaLogin, #portadaRegistro {
+   -fx-background-color:rgb(90, 168, 70);
+}
+
+#datosRegistro, #datosLogin {
+   -fx-background-color:rgb(90, 168, 70, 0.5);
+}
+
+#pantallaCarga {
+   -fx-background-color:rgb(90, 168, 70, 0.3);
+}
+
+#storeView {
+   -fx-background-color:rgb(90, 168, 70, 0.7);
+}
+
+#productos {
+   -fx-background-image: url(../img/FlowerLogo0.png);
+   -fx-background-repeat: no-repeat;
+   -fx-background-size: 90% ;
+   -fx-background-position: center;
+   -fx-background-color: none;
+}
+
+#infoProducto .label {
+   -fx-text-fill: white;
+   -fx-font-size: 18px;
+}
+
+#shoppingCart {
+   -fx-background-color: none;
+   -fx-text-fill: white;
+   -fx-width: 50px;
+   -fx-height: 50px;
+}
+
+#shoppingCart:hover {
+   -fx-background-color: rgb(255,255,255,0.3);
+   -fx-text-fill: black;
+ }
+
+
+ #shoppingCart:pressed {
+   -fx-background-color: rgb(255,255,255,0.7);
+   -fx-text-fill:  rgb(60, 110, 48);
+ }
+
+ .combo-box {
+   -fx-background-color: rgb(90, 168, 70, 0.5);
+   -fx-text-fill: white;
+ }
+
+ .combo-box-popup {
+   -fx-background-color: rgb(90, 168, 70, 0.5);
+   -fx-text-fill: white;
+ }

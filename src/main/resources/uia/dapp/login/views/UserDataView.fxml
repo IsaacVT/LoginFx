@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@TiendaFloresStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uia.dapp.login.controller.UserDataViewController">
+   <children>
+      <SplitPane dividerPositions="0.7725752508361204" layoutX="10.0" layoutY="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <items>
+            <AnchorPane id="datosRegistro" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <GridPane alignment="CENTER" layoutX="98.0" layoutY="244.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label alignment="CENTER" text="                 PERFIL                 " textFill="WHITE" underline="true">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0" GridPane.rowIndex="1">
+                           <children>
+                              <Label text="Nombre(s)" textFill="WHITE" />
+                              <TextField fx:id="fNombreField" prefWidth="100.0" />
+                              <TextField fx:id="sNombreField" layoutX="136.0" layoutY="18.0" prefWidth="100.0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.rowIndex="2">
+                           <children>
+                              <Label text="Ap. Paterno" textFill="WHITE" />
+                              <TextField fx:id="paternoField" prefWidth="125.0" />
+                              <Label text="Ap. Materno" textFill="WHITE" />
+                              <TextField fx:id="maternoField" prefWidth="125.0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.rowIndex="4">
+                           <children>
+                              <Label text="Email" textFill="WHITE" />
+                              <TextField fx:id="emailField" alignment="CENTER_RIGHT" prefWidth="200.0" text="\@ejemplo.com" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.rowIndex="5">
+                           <children>
+                              <Label text="Password" textFill="WHITE" />
+                              <PasswordField fx:id="newPasswordField" prefWidth="130.0" />
+                              <Button mnemonicParsing="false" onAction="#handleCambiarPasword" text="Cambiar" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.rowIndex="6">
+                           <children>
+                              <Label text="Repite Password" textFill="WHITE" />
+                              <PasswordField fx:id="repeatPasswordField" editable="false" prefWidth="130.0" />
+                           </children>
+                           <padding>
+                              <Insets right="-1.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="25.0" GridPane.rowIndex="7">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#handleGuardar" prefWidth="90.0" text="Guardar" />
+                              <Button mnemonicParsing="false" onAction="#handleBorrar" prefWidth="90.0" text="Eliminar" />
+                              <Button layoutX="232.0" layoutY="17.0" mnemonicParsing="false" onAction="#handleRegresar" prefWidth="90.0" text="Volver" />
+                           </children>
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.rowIndex="3">
+                           <children>
+                              <Label text="Fecha Nac." textFill="WHITE" />
+                              <TextField fx:id="nacimientoField" prefWidth="125.0" />
+                              <Label text="Num. Tel." textFill="WHITE" />
+                              <TextField fx:id="telefonoField" prefWidth="125.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane id="portadaRegistro" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <ImageView blendMode="OVERLAY" fitHeight="500.0" fitWidth="500.0" layoutX="-117.0" layoutY="-40.0" opacity="0.5" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+                     <image>
+                        <Image url="@../img/FlowerLogo2.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="22.0" layoutY="346.0" mnemonicParsing="false" onAction="#handleLogout" prefWidth="90.0" text="Logout" />
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
